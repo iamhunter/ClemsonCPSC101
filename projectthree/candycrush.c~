@@ -1,0 +1,89 @@
+//
+//  sandbox
+//
+//
+//  Created by Andrew Marion Hunter on 2/18/15.
+//
+//
+
+#include <stdio.h>
+
+void numberColor(int number);
+
+int main(){
+    int r = 10;
+    int c = 11;
+    int gameBoard[c][r];
+    
+    //read Values from file to gameboard
+    for(r = 0 ; r < 10 ; r++){
+        for(c = 1; c < 11; c++){
+            scanf("%d", &gameBoard[c][r]);
+        }
+    }
+    //print Top numbers
+    printf(" ");
+    for(r = 0; r<10; r++){
+        printf("%d ", r);
+    }
+    
+    printf("\n");
+    //change Numbers to colors
+    for(r = 0; r < 10; r++){
+        for(c = 0; c < 11; c++){
+            if(c == 0){
+                printf("%d", r);
+            }
+            else{
+                numberColor(gameBoard[c][r]);
+            }
+            
+        }
+        printf("\x1b[m\n");
+    }
+    printf("\n");
+    
+    for(r = 0; r < 10 ; r++){
+        for(c = 1; c < 11; c++){
+            if(gameBoard[c][r] == gameBoard[c][r+1] && gameBoard[c][r+1] == gameBoard[c][r+2]){
+                gameBoard[c][r] = gameBoard[c][r]+ 10;
+                gameBoard[c][r+1] = gameBoard[c][r+1]+ 10;
+                gameBoard[c][r+2] = gameBoard[c][r+2]+ 10;
+            }
+            if(gameBoard[c][r] == gameBoard[c+1][r] && gameBoard[c+1][r] == gameBoard[c+2][r]){
+                gameBoard[c][r] = gameBoard[c][r]+10;
+                gameBoard[c+1][r] = gameBoard[c+1][r]+10;
+                gameBoard[c+2][r] = gameBoard[c+2][r]+10;
+            }
+        }
+    }
+    printf(" ");
+    for(r = 0; r<10; r++){
+        printf("%d ", r);
+    }
+    printf("\n");
+    
+    for(r = 0; r < 10; r++){
+        for(c = 0; c < 11; c++){
+            if(c == 0){
+                printf("%d", r);
+            }
+            else{
+                numberColor(gameBoard[c][r]);
+            }
+            
+        }
+        printf("\x1b[m\n");
+    }
+    printf("\n");
+    return(NULL);
+}
+
+void numberColor(int number){
+    if(number > 10){
+        printf("\x1b[49mXX");
+    }
+    else{
+        printf("\x1b[4%dm  ", number);
+    }
+}

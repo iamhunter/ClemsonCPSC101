@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "instagram.h"
+
+int main(int argc, char * argv[]){
+    int width, height;
+    pixel * image = NULL;
+    
+    image = readPPMFile("paw.ppm",&width,&height);
+    contrast(image,width,height);
+    writePPMFile("out.ppm",image,width,height);
+
+    
+    free(image);
+    
+    return 0;
+}

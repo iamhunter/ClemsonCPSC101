@@ -1,0 +1,110 @@
+//
+//  instagram.c
+//  
+//
+//  Created by Andrew Marion Hunter on 4/6/15.
+//
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "instagram.h"
+
+
+int subscript(int r, int c, int width){
+        return r * width + c;
+}
+
+
+void writeHeader(FILE * file, int width, int height){
+    fprintf(file,"P6\n %d %d 255\n",width,height);
+}
+
+
+void writePixel(FILE * file, pixel p){
+    fprintf(file,"%c%c%c",(unsigned char)p.r,(unsigned char)p.g, (unsigned char)p.b);
+}
+
+
+void writePPMFile(char * filename, pixel * picture, int width, int height){
+    FILE * writeFile = fopen(filename,"w");
+    writeHeader(writeFile,width,height);
+    
+
+    int r, c;
+    for (r = 0; r < height; r++){
+        for (c = 0; c < width; c++){
+            writePixel(writeFile,picture[subscript(r,c,width)]);
+        }
+    }
+    fclose(writeFile);
+}
+
+
+void readHeader(FILE * file, int * width, int * height){
+    fscanf(file,"P6\n %d %d 255\n",width,height);
+}
+
+
+void readPixel(FILE * file, pixel * p){
+    unsigned char r, g, b;
+    fscanf(file,"%c%c%c",&r,&g,&b);
+    p->r = r;
+    p->g = g;
+    p->b = b;
+}
+
+
+pixel * readPPMFile(char * filename, int * width, int * height){
+    FILE * readFile = fopen(filename,"r");
+        readHeader(readFile,width,height);
+    
+    pixel * image = malloc(sizeof(pixel)*(*width)*(*height));
+    
+    int r, c;
+    for (r = 0; r < *height; r++){
+        for (c = 0; c < *width; c++){
+            readPixel(readFile,&image[subscript(r,c,*width)]);
+        }
+    }
+    
+    fclose(readFile);
+    return image;
+}
+
+/*
+ Algorithm for contrast
+ 1. Prompt the user for a value between 0 and 255.
+ 2. For each pixel:
+	a. If any of three of the color channel values are below that value
+ i. Make the pixel white.
+	b. Otherwise
+ i. Make the pixel black
+ */
+
+void contrast(pixel * image, int width, int height){
+    int value;
+    
+    printf("Please enter an integer between 0 and 255");
+    scanf("%d",&value);
+    
+    int r, c;
+    for (r = 0; r < height; r++){
+        for (c = 0; c < width; c++){
+		pixel pix = image[subscript(r,c,width)];
+            
+            if(p.r < value || p.g < value || p.b < value){
+                p.r = 255;
+                p.g = 255;
+                p.b = 255;
+            }
+            else{
+                p.r = 0;
+                p.g = 0;
+                p.b = 0;
+            }
+		image[subscript(r,c,width)] = pix;
+        }
+    }
+}

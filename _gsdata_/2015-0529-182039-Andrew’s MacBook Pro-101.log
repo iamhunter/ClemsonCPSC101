@@ -1,0 +1,16 @@
+2015-05-29 18:20:42: == Analyze runs in Compare MD5s mode, so it will run SLOWLY, as all file bodies have to be read to compute their MD5s
+2015-05-29 18:20:42: -- Analysis Started by On File Change 1st Full Analyze
+2015-05-29 18:20:42: Delete abandoned lock file at /Users/andrewmarionhunter/Google Drive/School/CPSC 1010/101
+2015-05-29 18:20:43: Delete abandoned lock file at sftp://access.cs.clemson.edu/home/ahunte3/101
+2015-05-29 18:23:34: Changes: 1, Conflicts: 0, CopyTime: 0, CopyState: 0/0, Errors: 0, All: 226
+2015-05-29 18:23:34: Left to Right: Copy File: 1 
+2015-05-29 18:23:34: == Sync Started by On File Change 1st Full Analyze
+2015-05-29 18:23:34: Start only 1 threads, limited by tasks to run
+2015-05-29 18:23:38: Copy Over '/Users/andrewmarionhunter/Google Drive/School/CPSC 1010/101/Instagram/a.out' -> 'sftp://access.cs.clemson.edu/home/ahunte3/101/Instagram/a.out'
+2015-05-29 18:23:39: Deleted Recycled: /Users/andrewmarionhunter/Google Drive/School/CPSC 1010/101/_gsdata_/_saved_/lab9/a.out
+2015-05-29 18:23:39: Deleted Recycled: /Users/andrewmarionhunter/.goodsync/_mirrors_/sftp-access.cs.clemson.edu-home-ahunte3-101/_saved_/lab9/lab9.c
+2015-05-29 18:23:39: Listing Recycled Folder: /_gsdata_/_saved_/lab9: cannot open directory: no such file or directory
+2015-05-29 18:23:39: Deleted Recycled: /Users/andrewmarionhunter/.goodsync/_mirrors_/sftp-access.cs.clemson.edu-home-ahunte3-101/_saved_/lab9/a.out
+2015-05-29 18:23:39: Listing Recycled Folder: /_gsdata_/_saved_/lab9: cannot open directory: no such file or directory
+2015-05-29 18:23:39: == Sync Complete. Time: 00:00:05, Speed: 4.8 KB/s, OK: 1, Errors: 0
+2015-05-29 18:23:40: 

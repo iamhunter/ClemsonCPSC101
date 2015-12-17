@@ -1,0 +1,13 @@
+Name: Andrew Hunter
+Assignment title: Assignment 1: Flappy Bird
+
+Who did you work with on this project (MYSELF)?
+
+
+If you worked with others, what was your contribution? N/A
+
+
+What outside resources did you use, if any? (Piazza)
+
+
+By submitting this collaboration statement you affirm that you wrote all the code on your own.

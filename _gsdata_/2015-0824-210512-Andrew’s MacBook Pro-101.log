@@ -1,0 +1,12 @@
+2015-08-24 21:05:14: == Analyze runs in Compare MD5s mode, so it will run SLOWLY, as all file bodies have to be read to compute their MD5s
+2015-08-24 21:05:14: -- Analysis Started by On File Change 1st Full Analyze
+2015-08-24 21:05:30: Changes: 4, Conflicts: 0, CopyTime: 0, CopyState: 0/0, Errors: 0, All: 231
+2015-08-24 21:05:30: Right to Left: Copy File: 4 
+2015-08-24 21:05:30: == Sync Started by On File Change 1st Full Analyze
+2015-08-24 21:05:30: Create Folder '/Users/andrewmarionhunter/Google Drive/School/CPSC 1010/101/01162015'
+2015-08-24 21:05:30: Start only 3 threads, limited by tasks to run
+2015-08-24 21:05:31: Copy New 'sftp://access.cs.clemson.edu/home/ahunte3/101/01162015/a.out' -> '/Users/andrewmarionhunter/Google Drive/School/CPSC 1010/101/01162015/a.out'
+2015-08-24 21:05:31: Copy New 'sftp://access.cs.clemson.edu/home/ahunte3/101/01162015/example1.c' -> '/Users/andrewmarionhunter/Google Drive/School/CPSC 1010/101/01162015/example1.c'
+2015-08-24 21:05:31: Copy New 'sftp://access.cs.clemson.edu/home/ahunte3/101/01162015/example2.c' -> '/Users/andrewmarionhunter/Google Drive/School/CPSC 1010/101/01162015/example2.c'
+2015-08-24 21:05:59: Cannot connect to sftp://access.cs.clemson.edu/home/ahunte3/101: Connection closed by remote host
+2015-08-24 21:05:59: 
